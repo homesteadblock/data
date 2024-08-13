@@ -1,0 +1,16 @@
+!pip install nltk
+!pip install gtts
+!pip install playsound
+
+# text to speech
+from gtts import gTTS
+from IPython.display import Audio 
+
+mytext = "Welcome to Natural Language programming"
+language = "en"
+myobj = gTTS(text=mytext, lang=language, slow=False)
+myobj.save("myfile.mp3")
+
+print("1_Vaishnavi Boga \n")
+# Play the audio file directly
+Audio("myfile.mp3", autoplay=True)

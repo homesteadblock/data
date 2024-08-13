@@ -1,0 +1,11 @@
+!pip install nltk
+
+import nltk
+from nltk.tokenize import word_tokenize
+
+# Create a string input
+str = "I love to study Natural Language Processing in Python"
+
+print("1_Vaishnavi Boga \n")
+# Use tokenize method
+print(word_tokenize(str))

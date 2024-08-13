@@ -1,0 +1,16 @@
+!pip install nltk
+!pip install keras
+!pip install keras-preprocessing-text
+!pip install keras-preprocessing-sequence
+!pip install text-to-word-sequence
+!pip install tensorflow
+
+import tensorflow as tf
+import keras
+# Avoid overwriting built-in functions
+text = "I love to study Natural Language Processing in Python"
+
+print("1_Vaishnavi Boga \n")
+# Tokenize the text
+tokens = tf.keras.preprocessing.text.text_to_word_sequence(text)
+print(tokens)

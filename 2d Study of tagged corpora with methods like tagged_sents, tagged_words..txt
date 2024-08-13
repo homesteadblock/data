@@ -1,0 +1,19 @@
+!pip install nltk
+!pip install nltk-tokenization
+!pip install nltk-punkt
+!pip install nltk-words
+
+
+import nltk
+from nltk import tokenize
+nltk.download('punkt')
+nltk.download('words')
+para = "Hello My name is Vaishnavi Boga Today you'll be learning NLTK"
+sents = tokenize.sent_tokenize(para)
+print("1_Vaishnavi Boga \n")
+print("\nsentence tokenization\n===================\n",sents)
+# word tokenization
+print("\nword tokenization\n===================\n")
+for index in range(len(sents)):
+  words = tokenize.word_tokenize(sents[index])
+print(words)

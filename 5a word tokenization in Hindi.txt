@@ -1,0 +1,21 @@
+!pip install torch==1.3.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+!pip install inltk
+!pip install tornado==4.5.3
+!pip install indic-nlp-library
+
+INDIC_NLP_LIB_HOME = 'indic_nlp_library'
+INDIC_NLP_RESOURCES = 'indic_nlp_resources'
+
+import sys
+import os
+
+sys.path.append(os.path.join(INDIC_NLP_LIB_HOME, 'src'))
+print(sys.path)
+from indicnlp.tokenize import indic_tokenize
+
+indic_string = 'सुनो, कुछ आवाज़ आ रही है। फोन?'
+print("1_Vaishnavi Boga \n")
+print('Input String: {}'.format(indic_string))
+print('Tokens: ')
+for t in indic_tokenize.trivial_tokenize(indic_string):
+    print(t)
